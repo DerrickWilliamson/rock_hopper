@@ -1,21 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-import 'package:rock_hopper/views/homepage.dart';
+import 'package:rock_hopper/views/splash_screen3.dart';
 
-class SplashScreen extends StatefulWidget {
-  const SplashScreen({super.key});
+class SplashScreen2 extends StatelessWidget {
+  const SplashScreen2({super.key});
 
-  @override
-  State<SplashScreen> createState() => _HomePageState();
-}
-
-class _HomePageState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Lottie.network(
               'https://assets7.lottiefiles.com/packages/lf20_qhzucuii.json'),
@@ -24,11 +19,11 @@ class _HomePageState extends State<SplashScreen> {
               backgroundColor: MaterialStateProperty.all(Colors.black),
             ),
             onPressed: () {
-              Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => const HomePage()));
+              Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => const SplashScreen3()));
             },
             child: const Text(
-              'Get Started',
+              'Splash Screen 3',
               style: TextStyle(color: Colors.white),
             ),
           ),
