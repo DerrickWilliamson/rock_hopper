@@ -18,7 +18,7 @@ class _HomePageState extends State<SplashScreen1> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Lottie.network(
-              'https://assets7.lottiefiles.com/packages/lf20_qhzucuii.json'),
+              'https://assets3.lottiefiles.com/packages/lf20_6pjojgtl.json'),
           ElevatedButton(
             style: ButtonStyle(
               backgroundColor: MaterialStateProperty.all(Colors.black),

@@ -13,7 +13,7 @@ class SplashScreen3 extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Lottie.network(
-              'https://assets7.lottiefiles.com/packages/lf20_qhzucuii.json'),
+              'https://assets1.lottiefiles.com/private_files/lf30_whmmdqnm.json'),
           ElevatedButton(
             style: ButtonStyle(
               backgroundColor: MaterialStateProperty.all(Colors.black),
