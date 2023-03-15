@@ -4,8 +4,21 @@ import 'package:rock_hopper/views/launches_page.dart';
 import 'package:rock_hopper/views/news_page.dart';
 import 'package:rock_hopper/views/travel_page.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({super.key});
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  int _selectedIndex = 0;
+
+  final List<Widget> _pages = [
+    const NewsPage(),
+    const LaunchesPage(),
+    const TravelPage(),
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -19,51 +32,13 @@ class HomePage extends StatelessWidget {
           Icon(Icons.rocket, size: 30),
           Icon(Icons.calendar_month_rounded, size: 30),
         ],
-        onTap: (value) {},
+        onTap: (value) {
+          setState(() {
+            _selectedIndex = value;
+          });
+        },
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            ElevatedButton(
-              style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all(Colors.black)),
-              onPressed: () {
-                Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => const NewsPage()));
-              },
-              child: const Text(
-                'News Page',
-                style: TextStyle(color: Colors.white),
-              ),
-            ),
-            ElevatedButton(
-              style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all(Colors.black)),
-              onPressed: () {
-                Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => const LaunchesPage()));
-              },
-              child: const Text(
-                'Lauches Page',
-                style: TextStyle(color: Colors.white),
-              ),
-            ),
-            ElevatedButton(
-              style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all(Colors.black)),
-              onPressed: () {
-                Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => const TravelPage()));
-              },
-              child: const Text(
-                'Travel Page',
-                style: TextStyle(color: Colors.white),
-              ),
-            ),
-          ],
-        ),
-      ),
+      body: _pages[_selectedIndex],
     );
   }
 }
