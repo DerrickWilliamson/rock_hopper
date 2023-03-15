@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-import 'package:rock_hopper/views/home_page.dart';
+import 'package:rock_hopper/views/main_screen.dart';
 
 class SplashScreen3 extends StatelessWidget {
   const SplashScreen3({super.key});
@@ -20,7 +20,7 @@ class SplashScreen3 extends StatelessWidget {
             ),
             onPressed: () {
               Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => const HomePage()));
+                  MaterialPageRoute(builder: (context) => const MainScreen()));
             },
             child: const Text(
               'Get Started',
