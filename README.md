@@ -1,16 +1,3 @@
 # rock_hopper
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+rock_hopper makes booking trips into space easy.  Read up on the latest rocket launches and spaceflight headlines.  Or check the current weather conditions on Mars.  Once you’re ready, click the “Book Travel” button and secure your ride into space!
