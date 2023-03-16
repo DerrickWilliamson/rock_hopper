@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
-class SplashScreen3 extends StatelessWidget {
-  const SplashScreen3({super.key});
+class SplashPage3 extends StatelessWidget {
+  const SplashPage3({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:rock_hopper/views/main/launches_page.dart';
+import 'package:rock_hopper/views/main/main_page.dart';
 import 'package:rock_hopper/views/main/news_page.dart';
 import 'package:rock_hopper/views/main/travel_page.dart';
 import 'package:rock_hopper/views/onboarding/splash_page3.dart';
@@ -40,7 +41,31 @@ class _HomePageState extends State<OnboardingPage> {
           ),
           Container(
             alignment: const Alignment(0, 0.75),
-            child: SmoothPageIndicator(controller: _controller, count: 3),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                // skip button
+                GestureDetector(
+                  child: const Text('skip'),
+                  onTap: () {
+                    _controller.jumpToPage(2);
+                  },
+                ),
+
+                SmoothPageIndicator(controller: _controller, count: 3),
+
+                // next button or done button when on last page
+                GestureDetector(
+                  child: const Text('next'),
+                  onTap: () {
+                    _controller.nextPage(
+                      duration: const Duration(milliseconds: 300),
+                      curve: Curves.ease,
+                    );
+                  },
+                ),
+              ],
+            ),
           )
         ],
       ),
