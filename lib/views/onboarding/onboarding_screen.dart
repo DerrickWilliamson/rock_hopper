@@ -44,23 +44,5 @@ class _HomePageState extends State<OnboardingScreen> {
         ],
       ),
     );
-    // return Scaffold(
-    //   bottomNavigationBar: CurvedNavigationBar(
-    //     animationDuration: const Duration(milliseconds: 300),
-    //     color: Colors.white,
-    //     backgroundColor: Colors.black,
-    //     items: const <Widget>[
-    //       Icon(Icons.newspaper_rounded, size: 30),
-    //       Icon(Icons.rocket, size: 30),
-    //       Icon(Icons.calendar_month_rounded, size: 30),
-    //     ],
-    //     onTap: (value) {
-    //       setState(() {
-    //         _selectedIndex = value;
-    //       });
-    //     },
-    //   ),
-    //   body: _pages[_selectedIndex],
-    // );
   }
 }
