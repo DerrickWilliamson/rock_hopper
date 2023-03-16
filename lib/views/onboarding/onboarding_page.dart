@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:rock_hopper/views/main/launches_page.dart';
 import 'package:rock_hopper/views/main/main_page.dart';
-import 'package:rock_hopper/views/main/news_page.dart';
-import 'package:rock_hopper/views/main/travel_page.dart';
 import 'package:rock_hopper/views/onboarding/splash_page3.dart';
 import 'package:rock_hopper/views/onboarding/splash_page2.dart';
 import 'package:rock_hopper/views/onboarding/splash_page1.dart';
@@ -18,13 +15,7 @@ class OnboardingPage extends StatefulWidget {
 class _HomePageState extends State<OnboardingPage> {
   PageController _controller = PageController(initialPage: 0);
 
-  int _selectedIndex = 0;
-
-  final List<Widget> _pages = [
-    const NewsPage(),
-    const LaunchesPage(),
-    const TravelPage(),
-  ];
+  bool onLastPage = false;
 
   @override
   Widget build(BuildContext context) {
@@ -33,6 +24,11 @@ class _HomePageState extends State<OnboardingPage> {
         children: [
           PageView(
             controller: _controller,
+            onPageChanged: (index) {
+              setState(() {
+                onLastPage = index == 2;
+              });
+            },
             children: const [
               SplashPage1(),
               SplashPage2(),
@@ -44,26 +40,34 @@ class _HomePageState extends State<OnboardingPage> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                // skip button
                 GestureDetector(
                   child: const Text('skip'),
                   onTap: () {
                     _controller.jumpToPage(2);
                   },
                 ),
-
                 SmoothPageIndicator(controller: _controller, count: 3),
-
-                // next button or done button when on last page
-                GestureDetector(
-                  child: const Text('next'),
-                  onTap: () {
-                    _controller.nextPage(
-                      duration: const Duration(milliseconds: 300),
-                      curve: Curves.ease,
-                    );
-                  },
-                ),
+                onLastPage
+                    ? GestureDetector(
+                        child: const Text('done'),
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const MainPage(),
+                            ),
+                          );
+                        },
+                      )
+                    : GestureDetector(
+                        child: const Text('next'),
+                        onTap: () {
+                          _controller.nextPage(
+                            duration: const Duration(milliseconds: 300),
+                            curve: Curves.ease,
+                          );
+                        },
+                      ),
               ],
             ),
           )
