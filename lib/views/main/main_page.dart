@@ -24,14 +24,21 @@ class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: CurvedNavigationBar(
-        animationDuration: const Duration(milliseconds: 300),
-        color: Colors.white,
-        backgroundColor: Colors.black,
-        items: const <Widget>[
-          Icon(Icons.newspaper_rounded, size: 30),
-          Icon(Icons.rocket, size: 30),
-          Icon(Icons.calendar_month_rounded, size: 30),
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: _selectedIndex,
+        items: const [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.newspaper_rounded),
+            label: 'News',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.rocket),
+            label: 'Launches',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.calendar_month_rounded),
+            label: 'Travel',
+          ),
         ],
         onTap: (value) {
           setState(() {
