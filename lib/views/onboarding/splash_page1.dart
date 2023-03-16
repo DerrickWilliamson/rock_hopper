@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
-class SplashScreen1 extends StatefulWidget {
-  const SplashScreen1({super.key});
+class SplashPage1 extends StatefulWidget {
+  const SplashPage1({super.key});
 
   @override
-  State<SplashScreen1> createState() => _HomePageState();
+  State<SplashPage1> createState() => _HomePageState();
 }
 
-class _HomePageState extends State<SplashScreen1> {
+class _HomePageState extends State<SplashPage1> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
