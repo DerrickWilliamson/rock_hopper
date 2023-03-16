@@ -4,14 +4,14 @@ import 'package:rock_hopper/views/launches_page.dart';
 import 'package:rock_hopper/views/news_page.dart';
 import 'package:rock_hopper/views/travel_page.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+class MainScreen extends StatefulWidget {
+  const MainScreen({super.key});
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<MainScreen> createState() => _HomePageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _HomePageState extends State<MainScreen> {
   int _selectedIndex = 0;
 
   final List<Widget> _pages = [
