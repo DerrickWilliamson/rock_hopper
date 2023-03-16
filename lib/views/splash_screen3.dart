@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-import 'package:rock_hopper/views/main_screen.dart';
+import 'package:rock_hopper/views/onboarding_screen.dart';
 
 class SplashScreen3 extends StatelessWidget {
   const SplashScreen3({super.key});
@@ -19,8 +19,8 @@ class SplashScreen3 extends StatelessWidget {
               backgroundColor: MaterialStateProperty.all(Colors.black),
             ),
             onPressed: () {
-              Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => const MainScreen()));
+              Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => const OnboardingScreen()));
             },
             child: const Text(
               'Get Started',
