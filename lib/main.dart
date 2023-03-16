@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:rock_hopper/views/onboarding_screen.dart';
-import 'package:rock_hopper/views/splash_screen1.dart';
+import 'package:rock_hopper/views/onboarding/onboarding_screen.dart';
 
 void main() {
   runApp(const MyApp());

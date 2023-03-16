@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-import 'package:rock_hopper/views/spash_screen2.dart';
 
 class SplashScreen1 extends StatefulWidget {
   const SplashScreen1({super.key});
