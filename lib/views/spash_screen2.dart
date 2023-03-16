@@ -14,19 +14,6 @@ class SplashScreen2 extends StatelessWidget {
         children: [
           Lottie.network(
               'https://assets7.lottiefiles.com/packages/lf20_qhzucuii.json'),
-          ElevatedButton(
-            style: ButtonStyle(
-              backgroundColor: MaterialStateProperty.all(Colors.black),
-            ),
-            onPressed: () {
-              Navigator.of(context).push(MaterialPageRoute(
-                  builder: (context) => const SplashScreen3()));
-            },
-            child: const Text(
-              'Splash Screen 3',
-              style: TextStyle(color: Colors.white),
-            ),
-          ),
         ],
       ),
     );

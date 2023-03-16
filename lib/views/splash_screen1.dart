@@ -19,19 +19,6 @@ class _HomePageState extends State<SplashScreen1> {
         children: [
           Lottie.network(
               'https://assets3.lottiefiles.com/packages/lf20_6pjojgtl.json'),
-          ElevatedButton(
-            style: ButtonStyle(
-              backgroundColor: MaterialStateProperty.all(Colors.black),
-            ),
-            onPressed: () {
-              Navigator.of(context).push(MaterialPageRoute(
-                  builder: (context) => const SplashScreen2()));
-            },
-            child: const Text(
-              'Splash Screen 2',
-              style: TextStyle(color: Colors.white),
-            ),
-          ),
         ],
       ),
     );

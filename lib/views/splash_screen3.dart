@@ -14,19 +14,6 @@ class SplashScreen3 extends StatelessWidget {
         children: [
           Lottie.network(
               'https://assets1.lottiefiles.com/private_files/lf30_whmmdqnm.json'),
-          ElevatedButton(
-            style: ButtonStyle(
-              backgroundColor: MaterialStateProperty.all(Colors.black),
-            ),
-            onPressed: () {
-              Navigator.of(context).push(MaterialPageRoute(
-                  builder: (context) => const OnboardingScreen()));
-            },
-            child: const Text(
-              'Get Started',
-              style: TextStyle(color: Colors.white),
-            ),
-          ),
         ],
       ),
     );
