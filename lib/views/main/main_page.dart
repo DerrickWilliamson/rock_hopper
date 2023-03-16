@@ -1,4 +1,3 @@
-import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:rock_hopper/views/main/launches_page.dart';
 import 'package:rock_hopper/views/main/news_page.dart';
@@ -25,6 +24,7 @@ class _MainPageState extends State<MainPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: BottomNavigationBar(
+        selectedItemColor: Colors.orangeAccent,
         currentIndex: _selectedIndex,
         items: const [
           BottomNavigationBarItem(
