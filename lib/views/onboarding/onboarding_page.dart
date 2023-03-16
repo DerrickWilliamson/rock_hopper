@@ -41,7 +41,10 @@ class _HomePageState extends State<OnboardingPage> {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 GestureDetector(
-                  child: const Text('skip'),
+                  child: const Text(
+                    'skip',
+                    style: TextStyle(color: Colors.orangeAccent),
+                  ),
                   onTap: () {
                     _controller.jumpToPage(2);
                   },
@@ -49,7 +52,10 @@ class _HomePageState extends State<OnboardingPage> {
                 SmoothPageIndicator(controller: _controller, count: 3),
                 onLastPage
                     ? GestureDetector(
-                        child: const Text('done'),
+                        child: const Text(
+                          'done',
+                          style: TextStyle(color: Colors.orangeAccent),
+                        ),
                         onTap: () {
                           Navigator.push(
                             context,
@@ -60,7 +66,10 @@ class _HomePageState extends State<OnboardingPage> {
                         },
                       )
                     : GestureDetector(
-                        child: const Text('next'),
+                        child: const Text(
+                          'next',
+                          style: TextStyle(color: Colors.orangeAccent),
+                        ),
                         onTap: () {
                           _controller.nextPage(
                             duration: const Duration(milliseconds: 300),
