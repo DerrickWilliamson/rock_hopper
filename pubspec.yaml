@@ -16,8 +16,7 @@ dependencies:
   lottie: ^2.3.0
   curved_navigation_bar: ^1.0.3
   smooth_page_indicator: ^1.0.1
-  json_serializable: ^6.6.1
-  build_runner: ^2.3.3
+
   json_annotation: ^4.8.0
 
 dev_dependencies:
@@ -26,6 +25,8 @@ dev_dependencies:
 
 
   flutter_lints: ^2.0.0
+  json_serializable: ^6.6.1
+  build_runner: ^2.3.3
 
 
 flutter:
