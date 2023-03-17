@@ -32,19 +32,19 @@ class _MainPageState extends State<MainPage> {
         items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.newspaper_rounded),
-            label: 'News',
+            label: 'Space News',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.rocket),
-            label: 'Launches',
+            label: 'Rocket Launches',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.cloud_circle),
-            label: 'Weather',
+            icon: Icon(Icons.wb_sunny_rounded),
+            label: 'Mars Weather',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.calendar_month_rounded),
-            label: 'Travel',
+            label: 'Book Travel',
           ),
         ],
         onTap: (value) {
