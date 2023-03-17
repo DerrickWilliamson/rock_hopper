@@ -43,7 +43,8 @@ class _HomePageState extends State<OnboardingPage> {
                 GestureDetector(
                   child: const Text(
                     'skip',
-                    style: TextStyle(color: Colors.orangeAccent),
+                    style:
+                        TextStyle(color: Colors.orangeAccent, fontSize: 20.0),
                   ),
                   onTap: () {
                     _controller.jumpToPage(2);
@@ -54,7 +55,8 @@ class _HomePageState extends State<OnboardingPage> {
                     ? GestureDetector(
                         child: const Text(
                           'done',
-                          style: TextStyle(color: Colors.orangeAccent),
+                          style: TextStyle(
+                              color: Colors.orangeAccent, fontSize: 20.0),
                         ),
                         onTap: () {
                           Navigator.push(
@@ -68,7 +70,8 @@ class _HomePageState extends State<OnboardingPage> {
                     : GestureDetector(
                         child: const Text(
                           'next',
-                          style: TextStyle(color: Colors.orangeAccent),
+                          style: TextStyle(
+                              color: Colors.orangeAccent, fontSize: 20.0),
                         ),
                         onTap: () {
                           _controller.nextPage(
