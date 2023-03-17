@@ -18,6 +18,21 @@ class _HomePageState extends State<SplashPage1> {
         children: [
           Lottie.network(
               'https://assets3.lottiefiles.com/packages/lf20_6pjojgtl.json'),
+          const SizedBox(height: 20),
+          const Expanded(
+            child: Padding(
+              padding: EdgeInsets.only(left: 20.0, right: 20.0),
+              child: Text(
+                textAlign: TextAlign.center,
+                'Rock Hopper makes booking trips into space easy.',
+                style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+          ),
         ],
       ),
     );
