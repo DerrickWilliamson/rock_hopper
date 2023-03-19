@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:http/http.dart' as http;
 import 'package:json_annotation/json_annotation.dart';
+import 'package:rock_hopper/views/constants.dart';
 
 part 'mars_weather.g.dart';
 
@@ -51,13 +52,11 @@ class MarsWeatherService {
   final http.Client _client = http.Client();
 
   Future<MarsWeatherResponse> fetchMarsWeather() async {
-    final response = await _client.get(
-        Uri.parse('https://api.nasa.gov/insight_weather/?api_key=DEMO_KEY'));
+    final response = await _client.get(Uri.parse(kInsightMarsWeatherUrl));
 
     if (response.statusCode == 200) {
       final json = await http
-          .get(Uri.parse(
-              'https://api.nasa.gov/insight_weather/?api_key=DEMO_KEY'))
+          .get(Uri.parse(kInsightMarsWeatherUrl))
           .then((response) => response.body);
 
       return MarsWeatherResponse.fromJson(jsonDecode(json));
