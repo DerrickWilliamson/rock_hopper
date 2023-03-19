@@ -56,8 +56,52 @@ class _WeatherPageState extends State<WeatherPage> {
                     fontWeight: FontWeight.w800,
                     fontSize: 28.0),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 30.0,
+              ),
+              Expanded(
+                child: FutureBuilder(
+                  future: _getWeatherData,
+                  builder: (context, snapshot) {
+                    if (snapshot.connectionState == ConnectionState.waiting) {
+                      return const Center(
+                        child: CircularProgressIndicator(),
+                      );
+                    } else if (snapshot.hasError) {
+                      return Center(
+                        child: Text(
+                          "Error: ${snapshot.error}",
+                          style: const TextStyle(fontSize: 18.0),
+                        ),
+                      );
+                    } else {
+                      return ListView.builder(
+                        itemCount: _weather.length,
+                        itemBuilder: (context, index) {
+                          final weather = _weather[index];
+                          return Card(
+                            child: Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Column(
+                                children: <Widget>[
+                                  Text(
+                                    "Date: ${weather.sol}",
+                                    style: const TextStyle(
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                  const SizedBox(height: 8.0),
+                                  Text("Temperature: ${weather.maxTemp}"),
+                                  const SizedBox(height: 8.0),
+                                  Text("Wind speed: ${weather.windSpeed}")
+                                ],
+                              ),
+                            ),
+                          );
+                        },
+                      );
+                    }
+                  },
+                ),
               ),
             ],
           ),
