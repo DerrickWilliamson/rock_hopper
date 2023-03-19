@@ -24,7 +24,7 @@ class WeatherPage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: const <Widget>[
               Text(
-                "Latest Weather\nat Elysium Planitia",
+                "Current Weather \nat Elysium Planitia",
                 style: TextStyle(
                     color: Colors.white,
                     fontWeight: FontWeight.w800,
@@ -35,15 +35,6 @@ class WeatherPage extends StatelessWidget {
               ),
             ],
           ),
-          // body: Center(
-          //   child: Text(
-          //     'Weather Page',
-          //     style: TextStyle(
-          //       fontSize: 30,
-          //       fontWeight: FontWeight.bold,
-          //     ),
-          //   ),
-          // ),
         ),
       ),
     );
