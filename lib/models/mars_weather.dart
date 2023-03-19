@@ -1,12 +1,11 @@
-import 'package:flutter/material.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'mars_weather.g.dart';
 
 @JsonSerializable()
 class MarsWeather {
-  final double temp;
-  final double windSpeed;
+  final num? temp;
+  final double? windSpeed;
 
   MarsWeather({required this.temp, required this.windSpeed});
 

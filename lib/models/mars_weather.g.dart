@@ -7,8 +7,8 @@ part of 'mars_weather.dart';
 // **************************************************************************
 
 MarsWeather _$MarsWeatherFromJson(Map<String, dynamic> json) => MarsWeather(
-      temp: (json['temp'] as num).toDouble(),
-      windSpeed: (json['windSpeed'] as num).toDouble(),
+      temp: json['temp'] as num?,
+      windSpeed: (json['windSpeed'] as num?)?.toDouble(),
     );
 
 Map<String, dynamic> _$MarsWeatherToJson(MarsWeather instance) =>
