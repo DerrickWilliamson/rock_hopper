@@ -11,7 +11,7 @@ class WeatherPage extends StatefulWidget {
 
 class _WeatherPageState extends State<WeatherPage> {
   final _weatherApi = WeatherApi();
-  final _weather = <MarsWeather>[];
+  List<MarsWeather> _weather = [];
 
   late Future<void> _getWeatherData;
 
@@ -25,6 +25,7 @@ class _WeatherPageState extends State<WeatherPage> {
     final weather = await _weatherApi.getWeatherData();
     setState(() {
       _weather.add(weather);
+      print(_weather);
     });
   }
 
@@ -57,7 +58,6 @@ class _WeatherPageState extends State<WeatherPage> {
               ),
               SizedBox(
                 height: 30.0,
-                child: Text('Temperature: ${_weather} °C\n'),
               ),
             ],
           ),
