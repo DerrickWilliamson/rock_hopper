@@ -3,6 +3,7 @@ import 'package:rock_hopper/views/main/launches_page.dart';
 import 'package:rock_hopper/views/main/news_page.dart';
 import 'package:rock_hopper/views/main/travel_page.dart';
 import 'package:rock_hopper/views/main/weather_page.dart';
+import 'package:rock_hopper/views/main/weather_page2.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({super.key});
@@ -17,7 +18,7 @@ class _MainPageState extends State<MainPage> {
   final List<Widget> _pages = [
     const NewsPage(),
     const LaunchesPage(),
-    const WeatherPage(),
+    const WeatherPage2(),
     const TravelPage(),
   ];
 

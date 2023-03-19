@@ -7,10 +7,10 @@ part of 'open_weather.dart';
 // **************************************************************************
 
 OpenWeather _$OpenWeatherFromJson(Map<String, dynamic> json) => OpenWeather(
-      temp: (json['temp'] as num).toDouble(),
-      tempMin: (json['tempMin'] as num).toDouble(),
-      tempMax: (json['tempMax'] as num).toDouble(),
-      humidity: (json['humidity'] as num).toDouble(),
+      temp: (json['temp'] as num?)?.toDouble(),
+      tempMin: (json['tempMin'] as num?)?.toDouble(),
+      tempMax: (json['tempMax'] as num?)?.toDouble(),
+      humidity: (json['humidity'] as num?)?.toDouble(),
       cityName: json['cityName'] as String?,
     );
 
