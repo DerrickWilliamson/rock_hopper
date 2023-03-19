@@ -10,7 +10,7 @@ class WeatherPage extends StatefulWidget {
 }
 
 class _WeatherPageState extends State<WeatherPage> {
-  final _weatherApi = WeatherApi();
+  final _weatherApi = MarsWeatherRepository();
   List<MarsWeather> _weather = [];
 
   late Future<void> _getWeatherData;
@@ -22,7 +22,7 @@ class _WeatherPageState extends State<WeatherPage> {
   }
 
   Future<void> _fetchWeatherData() async {
-    final weather = await _weatherApi.getWeatherData();
+    final weather = await _weatherApi.getLatestMarsWeather();
     setState(() {
       _weather.add(weather);
       print(_weather);
