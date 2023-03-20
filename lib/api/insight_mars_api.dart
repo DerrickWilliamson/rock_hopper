@@ -4,8 +4,16 @@ import 'package:http/http.dart' as http;
 import 'package:rock_hopper/models/mars_weather.dart';
 
 class MarsWeatherRepository {
+  final String _baseUrl = 'https://api.nasa.gov';
+  final String _apiKey = 'your_api_key_here';
+
   Future<MarsWeather> getLatestMarsWeather() async {
+<<<<<<< HEAD
     final url = Uri.parse('______________________________');
+=======
+    final url = Uri.parse(
+        '$_baseUrl/insight_weather/?api_key=$_apiKey&feedtype=json&ver=1.0');
+>>>>>>> parent of ce75c0f (updated to correct constant uri string for Insight Mars Weather API call)
 
     final response = await http.get(url);
 
