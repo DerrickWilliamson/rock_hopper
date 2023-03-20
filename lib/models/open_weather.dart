@@ -4,23 +4,21 @@ part 'open_weather.g.dart';
 
 @JsonSerializable()
 class OpenWeather {
-  @JsonKey(name: 'temp')
-  final double? temp;
+  final String? base;
 
-  @JsonKey(name: 'tempMin')
-  final double? tempMin;
+  @JsonKey(name: 'dt')
+  final int? tempMin;
 
-  @JsonKey(name: 'tempMax')
-  final double? tempMax;
+  @JsonKey(name: 'visibility')
+  final int? tempMax;
 
-  @JsonKey(name: 'humidity')
-  final double? humidity;
+  final String? humidity;
 
-  @JsonKey(name: 'cityName')
+  @JsonKey(name: 'name')
   final String? cityName;
 
   OpenWeather({
-    this.temp,
+    this.base,
     this.tempMin,
     this.tempMax,
     this.humidity,
@@ -32,28 +30,3 @@ class OpenWeather {
 
   Map<String, dynamic> toJson() => _$OpenWeatherToJson(this);
 }
-
-
-// import 'dart:convert';
-// import 'package:json_annotation/json_annotation.dart';
-
-// part 'open_weather.g.dart';
-
-// @JsonSerializable()
-// class OpenWeather {
-//   final double temp;
-//   final double tempMin;
-//   final double tempMax;
-//   final double humidity;
-//   final String? cityName;
-
-//   OpenWeather(
-//       {required this.temp,
-//       required this.tempMin,
-//       required this.tempMax,
-//       required this.humidity,
-//       required this.cityName});
-
-//   factory OpenWeather.fromJson(Map<String, dynamic> json) =>
-//       _$OpenWeatherFromJson(json);
-// }

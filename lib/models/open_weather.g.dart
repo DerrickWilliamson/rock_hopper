@@ -7,18 +7,18 @@ part of 'open_weather.dart';
 // **************************************************************************
 
 OpenWeather _$OpenWeatherFromJson(Map<String, dynamic> json) => OpenWeather(
-      temp: (json['temp'] as num?)?.toDouble(),
-      tempMin: (json['tempMin'] as num?)?.toDouble(),
-      tempMax: (json['tempMax'] as num?)?.toDouble(),
-      humidity: (json['humidity'] as num?)?.toDouble(),
-      cityName: json['cityName'] as String?,
+      base: json['base'] as String?,
+      tempMin: json['dt'] as int?,
+      tempMax: json['visibility'] as int?,
+      humidity: json['humidity'] as String?,
+      cityName: json['name'] as String?,
     );
 
 Map<String, dynamic> _$OpenWeatherToJson(OpenWeather instance) =>
     <String, dynamic>{
-      'temp': instance.temp,
-      'tempMin': instance.tempMin,
-      'tempMax': instance.tempMax,
+      'base': instance.base,
+      'dt': instance.tempMin,
+      'visibility': instance.tempMax,
       'humidity': instance.humidity,
-      'cityName': instance.cityName,
+      'name': instance.cityName,
     };

@@ -11,6 +11,7 @@ class OpenWeatherApi {
 
     if (response.body.isNotEmpty) {
       final jsonMap = json.decode(response.body);
+      print(jsonMap);
       return OpenWeather.fromJson(jsonMap);
     } else {
       throw Exception('Failed to load current weather data');
