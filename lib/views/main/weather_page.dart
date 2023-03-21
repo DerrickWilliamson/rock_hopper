@@ -38,15 +38,19 @@ class _WeatherPage2State extends State<WeatherPage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    'Current Temperature: ${_openWeather.mainWeather.temp}',
+                    'Current Temperature: ${_openWeather.mainWeather.temp} ºF',
                     style: TextStyle(fontSize: 20.0),
                   ),
                   Text(
-                    'Low: ${_openWeather.mainWeather.tempMin}',
+                    'Weather Conditions: ${_openWeather.weatherDescription}',
                     style: TextStyle(fontSize: 20.0),
                   ),
                   Text(
-                    'High: ${_openWeather.mainWeather.tempMax}',
+                    'Low: ${_openWeather.mainWeather.tempMin} ºF',
+                    style: TextStyle(fontSize: 20.0),
+                  ),
+                  Text(
+                    'High: ${_openWeather.mainWeather.tempMax} ºF',
                     style: TextStyle(fontSize: 20.0),
                   ),
                   Text(
@@ -54,7 +58,7 @@ class _WeatherPage2State extends State<WeatherPage> {
                     style: TextStyle(fontSize: 20.0),
                   ),
                   Text(
-                    'Weather Conditions: ${_openWeather.weatherDescription}',
+                    'Wind Speed: ${_openWeather.wind.speed} mph',
                     style: TextStyle(fontSize: 20.0),
                   ),
                 ],
