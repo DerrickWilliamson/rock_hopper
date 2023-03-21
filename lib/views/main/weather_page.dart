@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:rock_hopper/models/open_weather.dart';
 import 'package:rock_hopper/api/open_weather_api.dart';
 
-class WeatherPage2 extends StatefulWidget {
-  const WeatherPage2({Key? key}) : super(key: key);
+class WeatherPage extends StatefulWidget {
+  const WeatherPage({Key? key}) : super(key: key);
 
   @override
   _WeatherPage2State createState() => _WeatherPage2State();
 }
 
-class _WeatherPage2State extends State<WeatherPage2> {
+class _WeatherPage2State extends State<WeatherPage> {
   late OpenWeather _openWeather;
   bool _isLoading = true;
 
