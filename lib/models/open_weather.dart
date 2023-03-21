@@ -17,12 +17,16 @@ class OpenWeather {
 @JsonSerializable()
 class MainWeather {
   double temp;
+
   @JsonKey(name: 'feels_like')
   double feelsLike;
+
   @JsonKey(name: 'temp_min')
   double tempMin;
+
   @JsonKey(name: 'temp_max')
   double tempMax;
+
   int humidity;
 
   MainWeather(
@@ -47,37 +51,3 @@ class Wind {
 
   factory Wind.fromJson(Map<String, dynamic> json) => _$WindFromJson(json);
 }
-
-
-
-
-
-
-// @JsonSerializable()
-// class OpenWeather {
-//   final String? base;
-
-//   @JsonKey(name: 'dt')
-//   final int? tempMin;
-
-//   @JsonKey(name: 'visibility')
-//   final int? tempMax;
-
-//   final String? humidity;
-
-//   @JsonKey(name: 'name')
-//   final String? cityName;
-
-//   OpenWeather({
-//     this.base,
-//     this.tempMin,
-//     this.tempMax,
-//     this.humidity,
-//     this.cityName,
-//   });
-
-//   factory OpenWeather.fromJson(Map<String, dynamic> json) =>
-//       _$OpenWeatherFromJson(json);
-
-//   Map<String, dynamic> toJson() => _$OpenWeatherToJson(this);
-// }
