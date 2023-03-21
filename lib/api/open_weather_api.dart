@@ -17,7 +17,10 @@ class OpenWeatherApi {
       var mainWeather = MainWeather.fromJson(data['main']);
       var wind = Wind.fromJson(data['wind']);
       var weatherDescription = data['weather'][0]['description'];
-      return OpenWeather(mainWeather, wind, weatherDescription);
+      var cityName = data['name'];
+      var sysWeather = SysWeather.fromJson(data['sys']);
+      return OpenWeather(
+          mainWeather, wind, weatherDescription, cityName, sysWeather);
     } else {
       throw Exception('Failed to load current weather data');
     }

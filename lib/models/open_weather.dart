@@ -6,11 +6,16 @@ class OpenWeather {
   MainWeather mainWeather;
   Wind wind;
   String weatherDescription;
+  @JsonKey(name: 'name')
+  String cityName;
+  SysWeather sysWeather;
 
   OpenWeather(
     this.mainWeather,
     this.wind,
     this.weatherDescription,
+    this.cityName,
+    this.sysWeather,
   );
 }
 
@@ -50,4 +55,16 @@ class Wind {
   });
 
   factory Wind.fromJson(Map<String, dynamic> json) => _$WindFromJson(json);
+}
+
+@JsonSerializable()
+class SysWeather {
+  String country;
+  int sunrise;
+  int sunset;
+
+  SysWeather(this.country, this.sunrise, this.sunset);
+
+  factory SysWeather.fromJson(Map<String, dynamic> json) =>
+      _$SysWeatherFromJson(json);
 }

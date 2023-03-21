@@ -30,3 +30,16 @@ Wind _$WindFromJson(Map<String, dynamic> json) => Wind(
 Map<String, dynamic> _$WindToJson(Wind instance) => <String, dynamic>{
       'speed': instance.speed,
     };
+
+SysWeather _$SysWeatherFromJson(Map<String, dynamic> json) => SysWeather(
+      json['country'] as String,
+      json['sunrise'] as int,
+      json['sunset'] as int,
+    );
+
+Map<String, dynamic> _$SysWeatherToJson(SysWeather instance) =>
+    <String, dynamic>{
+      'country': instance.country,
+      'sunrise': instance.sunrise,
+      'sunset': instance.sunset,
+    };

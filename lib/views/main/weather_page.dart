@@ -38,6 +38,12 @@ class _WeatherPage2State extends State<WeatherPage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
+                    '${_openWeather.cityName}, ${_openWeather.sysWeather.country}',
+                    style:
+                        TextStyle(fontSize: 30.0, fontWeight: FontWeight.bold),
+                  ),
+                  SizedBox(height: 30.0),
+                  Text(
                     'Current Temperature: ${_openWeather.mainWeather.temp} ºF',
                     style: TextStyle(fontSize: 20.0),
                   ),
