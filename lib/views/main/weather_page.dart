@@ -51,12 +51,14 @@ class _WeatherPage2State extends State<WeatherPage> {
                     'Weather Conditions: ${_openWeather.weatherDescription}',
                     style: TextStyle(fontSize: 20.0),
                   ),
+                  Text('Feels Like: ${_openWeather.mainWeather.feelsLike} ºF',
+                      style: TextStyle(fontSize: 20.0)),
                   Text(
-                    'Low: ${_openWeather.mainWeather.tempMin} ºF',
+                    'Today\'s Low: ${_openWeather.mainWeather.tempMin} ºF',
                     style: TextStyle(fontSize: 20.0),
                   ),
                   Text(
-                    'High: ${_openWeather.mainWeather.tempMax} ºF',
+                    'Today\'s High: ${_openWeather.mainWeather.tempMax} ºF',
                     style: TextStyle(fontSize: 20.0),
                   ),
                   Text(
@@ -65,6 +67,14 @@ class _WeatherPage2State extends State<WeatherPage> {
                   ),
                   Text(
                     'Wind Speed: ${_openWeather.wind.speed} mph',
+                    style: TextStyle(fontSize: 20.0),
+                  ),
+                  Text(
+                    'Sunrise: ${_openWeather.sysWeather.sunrise}',
+                    style: TextStyle(fontSize: 20.0),
+                  ),
+                  Text(
+                    'Sunset: ${_openWeather.sysWeather.sunset}',
                     style: TextStyle(fontSize: 20.0),
                   ),
                 ],
