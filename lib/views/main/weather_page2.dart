@@ -37,11 +37,26 @@ class _WeatherPage2State extends State<WeatherPage2> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text('Current Temperature: ${_openWeather.base}'),
-                  Text('Low: ${_openWeather.tempMin}'),
-                  Text('High: ${_openWeather.tempMax}'),
-                  Text('Humidity: ${_openWeather.humidity}'),
-                  Text('City Name: ${_openWeather.cityName}'),
+                  Text(
+                    'Current Temperature: ${_openWeather.mainWeather.temp}',
+                    style: TextStyle(fontSize: 20.0),
+                  ),
+                  Text(
+                    'Low: ${_openWeather.mainWeather.tempMin}',
+                    style: TextStyle(fontSize: 20.0),
+                  ),
+                  Text(
+                    'High: ${_openWeather.mainWeather.tempMax}',
+                    style: TextStyle(fontSize: 20.0),
+                  ),
+                  Text(
+                    'Humidity: ${_openWeather.mainWeather.humidity}',
+                    style: TextStyle(fontSize: 20.0),
+                  ),
+                  Text(
+                    'Weather Conditions: ${_openWeather.weatherDescription}',
+                    style: TextStyle(fontSize: 20.0),
+                  ),
                 ],
               ),
             ),

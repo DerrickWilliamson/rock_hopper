@@ -6,19 +6,27 @@ part of 'open_weather.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-OpenWeather _$OpenWeatherFromJson(Map<String, dynamic> json) => OpenWeather(
-      base: json['base'] as String?,
-      tempMin: json['dt'] as int?,
-      tempMax: json['visibility'] as int?,
-      humidity: json['humidity'] as String?,
-      cityName: json['name'] as String?,
+MainWeather _$MainWeatherFromJson(Map<String, dynamic> json) => MainWeather(
+      (json['temp'] as num).toDouble(),
+      (json['feels_like'] as num).toDouble(),
+      (json['temp_min'] as num).toDouble(),
+      (json['temp_max'] as num).toDouble(),
+      json['humidity'] as int,
     );
 
-Map<String, dynamic> _$OpenWeatherToJson(OpenWeather instance) =>
+Map<String, dynamic> _$MainWeatherToJson(MainWeather instance) =>
     <String, dynamic>{
-      'base': instance.base,
-      'dt': instance.tempMin,
-      'visibility': instance.tempMax,
+      'temp': instance.temp,
+      'feels_like': instance.feelsLike,
+      'temp_min': instance.tempMin,
+      'temp_max': instance.tempMax,
       'humidity': instance.humidity,
-      'name': instance.cityName,
+    };
+
+Wind _$WindFromJson(Map<String, dynamic> json) => Wind(
+      speed: (json['speed'] as num).toDouble(),
+    );
+
+Map<String, dynamic> _$WindToJson(Wind instance) => <String, dynamic>{
+      'speed': instance.speed,
     };

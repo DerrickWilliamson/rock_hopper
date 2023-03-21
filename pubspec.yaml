@@ -19,6 +19,7 @@ dependencies:
 
   json_annotation: ^4.8.0
   http: ^0.13.5
+  flutter_dotenv: ^5.0.2
   
 
 dev_dependencies:
@@ -40,5 +41,6 @@ flutter:
 
   assets:
     - images/
+    - .env
 
 
