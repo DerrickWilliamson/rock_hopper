@@ -11,7 +11,7 @@ class LaunchesPage extends StatefulWidget {
 }
 
 class _LaunchesPageState extends State<LaunchesPage> {
-  LaunchesModel _launchesModel = LaunchesModel(0);
+  LaunchesModel _launchesModel = LaunchesModel(0, '', []);
   LaunchLibraryApi _launchLibraryApi = LaunchLibraryApi();
 
   Future<void> _getLaunches() async {
@@ -19,6 +19,8 @@ class _LaunchesPageState extends State<LaunchesPage> {
     setState(() {
       _launchesModel = launches;
       print(launches.count);
+      print(launches.next);
+      print(launches.results);
     });
   }
 

@@ -10,8 +10,10 @@ class LaunchLibraryApi {
 
     if (response.statusCode == 200) {
       var data = jsonDecode(response.body);
-      return LaunchesModel.fromJson(data);
-      print(data);
+      var count = data['count'];
+      var next = data['next'];
+      var results = data['results'];
+      return LaunchesModel(count, next, results);
     } else {
       throw Exception('Failed to load launches data');
     }
