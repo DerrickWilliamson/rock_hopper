@@ -20,9 +20,6 @@ class _LaunchesPageState extends State<LaunchesPage> {
     setState(() {
       _launchesModel = launches;
       _isLoading = false;
-      // print(launches.count);
-      // print(launches.next);
-      // print(launches.results);
     });
   }
 

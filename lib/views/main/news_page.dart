@@ -22,9 +22,6 @@ class _NewsPageState extends State<NewsPage> {
     setState(() {
       _newsModel = news;
       _isLoading = false;
-      // print(news.status);
-      // print(news.totalResults);
-      // print(news.articles);
     });
   }
 
