@@ -3,9 +3,9 @@ import 'package:http/http.dart' as http;
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:rock_hopper/models/launches_model.dart';
 
-class LaunchesLibraryApi {
+class LaunchLibraryApi {
   Future<LaunchesModel> getLaunches() async {
-    final url = Uri.parse(dotenv.env['LAUNCHES_LIBRARY_API_URL']!);
+    final url = Uri.parse(dotenv.env['LAUNCHES_LIBRARY_URL']!);
     final response = await http.get(url);
 
     if (response.statusCode == 200) {
