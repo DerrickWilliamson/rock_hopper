@@ -40,7 +40,7 @@ class _MainPageState extends State<MainPage> {
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.wb_sunny_rounded),
-            label: 'Earth Weather',
+            label: 'Local Weather',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.calendar_month_rounded),

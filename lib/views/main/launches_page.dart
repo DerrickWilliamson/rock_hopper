@@ -41,17 +41,17 @@ class _LaunchesPageState extends State<LaunchesPage> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  // Text(
-                  //   'Count: ${_launchesModel.count}',
-                  //   style: const TextStyle(fontSize: 20.0),
-                  // ),
-                  // const SizedBox(height: 20.0),
-                  // Text(
-                  //   'Next Url: ${_launchesModel.next}',
-                  //   style: const TextStyle(fontSize: 20.0),
-                  //   textAlign: TextAlign.center,
-                  // ),
-                  // const SizedBox(height: 20.0),
+                  Text(
+                    'Count: ${_launchesModel.count}',
+                    style: const TextStyle(fontSize: 20.0),
+                  ),
+                  const SizedBox(height: 20.0),
+                  Text(
+                    'Next Url: ${_launchesModel.next}',
+                    style: const TextStyle(fontSize: 20.0),
+                    textAlign: TextAlign.center,
+                  ),
+                  const SizedBox(height: 20.0),
                   Text(
                     'Launch Name: ${_launchesModel.results[0]['name']}',
                     style: const TextStyle(fontSize: 20.0),
@@ -72,6 +72,12 @@ class _LaunchesPageState extends State<LaunchesPage> {
                   const SizedBox(height: 20.0),
                   Text(
                     'Launch Description: ${_launchesModel.results[9]['status']['description']}',
+                    style: const TextStyle(fontSize: 20.0),
+                    textAlign: TextAlign.center,
+                  ),
+                  const SizedBox(height: 20.0),
+                  Text(
+                    'Results.length: ${_launchesModel.results.length}',
                     style: const TextStyle(fontSize: 20.0),
                     textAlign: TextAlign.center,
                   ),
