@@ -5,15 +5,18 @@ class NewsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
-        child: Text(
-          'News Page',
-          style: TextStyle(
-            fontSize: 30,
-            fontWeight: FontWeight.bold,
+    return Scaffold(
+      body: Column(
+        children: const [
+          Text(
+            'News Page',
+            style: TextStyle(
+              fontSize: 30,
+              fontWeight: FontWeight.bold,
+            ),
           ),
-        ),
+          Text('This is the news page'),
+        ],
       ),
     );
   }
