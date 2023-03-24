@@ -13,43 +13,71 @@ class LaunchesPage extends StatefulWidget {
 class _LaunchesPageState extends State<LaunchesPage> {
   LaunchesModel _launchesModel = LaunchesModel(0, '', []);
   LaunchLibraryApi _launchLibraryApi = LaunchLibraryApi();
+  bool _isLoading = true;
 
   Future<void> _getLaunches() async {
     final launches = await _launchLibraryApi.getLaunches();
     setState(() {
       _launchesModel = launches;
-      print(launches.count);
-      print(launches.next);
-      print(launches.results);
+      _isLoading = false;
+      // print(launches.count);
+      // print(launches.next);
+      // print(launches.results);
     });
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    _getLaunches();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const Text(
-              'Launches Page',
-              style: TextStyle(
-                fontSize: 30,
-                fontWeight: FontWeight.bold,
+      body: _isLoading
+          ? const Center(child: CircularProgressIndicator())
+          : Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  // Text(
+                  //   'Count: ${_launchesModel.count}',
+                  //   style: const TextStyle(fontSize: 20.0),
+                  // ),
+                  // const SizedBox(height: 20.0),
+                  // Text(
+                  //   'Next Url: ${_launchesModel.next}',
+                  //   style: const TextStyle(fontSize: 20.0),
+                  //   textAlign: TextAlign.center,
+                  // ),
+                  // const SizedBox(height: 20.0),
+                  Text(
+                    'Launch Name: ${_launchesModel.results[0]['name']}',
+                    style: const TextStyle(fontSize: 20.0),
+                    textAlign: TextAlign.center,
+                  ),
+                  const SizedBox(height: 20.0),
+                  Text(
+                    'Launch Description: ${_launchesModel.results[0]['status']['description']}',
+                    style: const TextStyle(fontSize: 20.0),
+                    textAlign: TextAlign.center,
+                  ),
+                  const SizedBox(height: 20.0),
+                  Text(
+                    'Launch Name: ${_launchesModel.results[9]['name']}',
+                    style: const TextStyle(fontSize: 20.0),
+                    textAlign: TextAlign.center,
+                  ),
+                  const SizedBox(height: 20.0),
+                  Text(
+                    'Launch Description: ${_launchesModel.results[9]['status']['description']}',
+                    style: const TextStyle(fontSize: 20.0),
+                    textAlign: TextAlign.center,
+                  ),
+                ],
               ),
             ),
-            const SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: () {
-                setState(() {
-                  _getLaunches();
-                });
-              },
-              child: const Text('Get Launches'),
-            ),
-          ],
-        ),
-      ),
     );
   }
 }
