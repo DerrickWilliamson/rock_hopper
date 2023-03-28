@@ -7,7 +7,11 @@ class WeatherInitial extends WeatherState {}
 
 class WeatherLoading extends WeatherState {}
 
-class WeatherLoaded extends WeatherState {}
+class WeatherLoaded extends WeatherState {
+  final OpenWeather openWeather;
+
+  WeatherLoaded(this.openWeather);
+}
 
 class WeatherError extends WeatherState {
   final String message;
