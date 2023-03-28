@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:rock_hopper/views/main/launches_page.dart';
-import 'package:rock_hopper/views/main/news_page.dart';
-import 'package:rock_hopper/views/main/travel_page.dart';
-import 'package:rock_hopper/views/main/weather_page.dart';
+
+import 'launches_page.dart';
+import 'news_page.dart';
+import 'travel_page.dart';
+import 'weather_page.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({super.key});

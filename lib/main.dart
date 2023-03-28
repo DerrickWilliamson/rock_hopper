@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'business_logic/bloc/weather_bloc.dart';
 import 'views/onboarding/onboarding_page.dart';
 
 Future main() async {
@@ -12,8 +14,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: OnboardingPage(),
+    return MaterialApp(
+      home: BlocProvider(
+        create: (context) => WeatherBloc(),
+        child: const OnboardingPage(),
+      ),
     );
   }
 }
