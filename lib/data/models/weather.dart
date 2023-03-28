@@ -1,8 +1,8 @@
 import 'package:json_annotation/json_annotation.dart';
 
-part 'open_weather.g.dart';
+part 'weather.g.dart';
 
-class OpenWeather {
+class Weather {
   MainWeather mainWeather;
   Wind wind;
   String weatherDescription;
@@ -10,7 +10,7 @@ class OpenWeather {
   String cityName;
   SysWeather sysWeather;
 
-  OpenWeather(
+  Weather(
     this.mainWeather,
     this.wind,
     this.weatherDescription,

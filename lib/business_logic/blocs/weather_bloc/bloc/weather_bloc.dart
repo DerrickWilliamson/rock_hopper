@@ -1,7 +1,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:meta/meta.dart';
 
-import '../../../../data/models/open_weather.dart';
+import '../../../../data/models/weather.dart';
 
 part 'weather_event.dart';
 part 'weather_state.dart';
