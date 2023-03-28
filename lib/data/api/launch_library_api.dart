@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:flutter_dotenv/flutter_dotenv.dart';
-import 'package:rock_hopper/models/launches_model.dart';
+import '../models/launches_model.dart';
 
 class LaunchLibraryApi {
   Future<LaunchesModel> getLaunches() async {

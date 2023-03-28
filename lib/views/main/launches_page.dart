@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:rock_hopper/api/launch_library_api.dart';
-
-import '../../models/launches_model.dart';
+import '../../data/api/launch_library_api.dart';
+import '../../data/models/launches_model.dart';
 
 class LaunchesPage extends StatefulWidget {
   const LaunchesPage({super.key});

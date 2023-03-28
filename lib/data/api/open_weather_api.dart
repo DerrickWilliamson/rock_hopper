@@ -1,8 +1,7 @@
 import 'dart:convert';
-
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:http/http.dart' as http;
-import 'package:rock_hopper/models/open_weather.dart';
+import '../models/open_weather.dart';
 
 class OpenWeatherApi {
   late String openWeatherApiKey = dotenv.env['OPENWEATHER_API_KEY']!;

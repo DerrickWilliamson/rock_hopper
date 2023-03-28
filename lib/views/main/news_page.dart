@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
-
-import '../../api/news_api.dart';
-import '../../models/news_model.dart';
+import '../../data/api/news_api.dart';
+import '../../data/models/news_model.dart';
 
 class NewsPage extends StatefulWidget {
   const NewsPage({super.key});

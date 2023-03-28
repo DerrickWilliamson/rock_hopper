@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:flutter_dotenv/flutter_dotenv.dart';
-import 'package:rock_hopper/models/news_model.dart';
+import '../models/news_model.dart';
 
 class NewsApi {
   String newsApiKey = dotenv.env['NEWS_API_KEY']!;

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
-import 'package:rock_hopper/views/onboarding/onboarding_page.dart';
+import 'views/onboarding/onboarding_page.dart';
 
 Future main() async {
   await dotenv.load(fileName: ".env");

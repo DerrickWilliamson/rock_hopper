@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:rock_hopper/models/open_weather.dart';
-import 'package:rock_hopper/api/open_weather_api.dart';
+import '../../data/models/open_weather.dart';
+import '../../data/api/open_weather_api.dart';
 
 class WeatherPage extends StatefulWidget {
   const WeatherPage({Key? key}) : super(key: key);
