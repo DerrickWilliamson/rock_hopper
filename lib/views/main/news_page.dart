@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../data/api/news_api.dart';
+import '../../data/services/news_api.dart';
 import '../../data/models/news_model.dart';
 
 class NewsPage extends StatefulWidget {
