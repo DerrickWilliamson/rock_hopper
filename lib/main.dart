@@ -3,7 +3,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:rock_hopper/business_logic/blocs/launches_bloc/bloc/launches_bloc.dart';
 import 'package:rock_hopper/business_logic/blocs/news_bloc/bloc/news_bloc.dart';
-import 'business_logic/blocs/weather_bloc/bloc/weather_bloc.dart';
 import 'views/onboarding/onboarding_page.dart';
 
 Future main() async {
@@ -19,9 +18,6 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: MultiBlocProvider(
         providers: [
-          BlocProvider<WeatherBloc>(
-            create: (context) => WeatherBloc(),
-          ),
           BlocProvider<NewsBloc>(
             create: (context) => NewsBloc(),
           ),
