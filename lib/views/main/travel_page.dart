@@ -8,11 +8,12 @@ class TravelPage extends StatelessWidget {
     return const Scaffold(
       body: Center(
         child: Text(
-          'Travel Page',
+          'Book\n Travel Page',
           style: TextStyle(
             fontSize: 30,
             fontWeight: FontWeight.bold,
           ),
+          textAlign: TextAlign.center,
         ),
       ),
     );
