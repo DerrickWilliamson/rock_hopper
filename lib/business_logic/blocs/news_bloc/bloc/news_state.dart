@@ -7,7 +7,11 @@ class NewsInitial extends NewsState {}
 
 class NewsLoading extends NewsState {}
 
-class NewsLoaded extends NewsState {}
+class NewsLoaded extends NewsState {
+  final NewsModel newsModel;
+
+  NewsLoaded(this.newsModel);
+}
 
 class NewsError extends NewsState {
   final String message;
