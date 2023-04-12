@@ -13,6 +13,8 @@ class NewsLoaded extends NewsState {
   NewsLoaded(this.newsModel);
 }
 
+class NewsPaginated extends NewsState {}
+
 class NewsError extends NewsState {
   final String message;
 
