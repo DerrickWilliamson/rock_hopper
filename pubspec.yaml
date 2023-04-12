@@ -42,7 +42,7 @@ flutter:
 
 
   assets:
-    - images/
+    - assets/
     - .env
 
 
