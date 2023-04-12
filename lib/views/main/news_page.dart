@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../data/services/news_api.dart';
+import '../../data/repositories/news_repo.dart';
 import '../../data/models/news_model.dart';
 
 class NewsPage extends StatefulWidget {
@@ -12,11 +12,11 @@ class NewsPage extends StatefulWidget {
 
 class _NewsPageState extends State<NewsPage> {
   NewsModel _newsModel = NewsModel('', 0, []);
-  NewsApi _newsApi = NewsApi();
+  NewsRepository _newsRepository = NewsRepository();
   bool _isLoading = true;
 
   Future<void> _getNews() async {
-    final news = await _newsApi.getNews();
+    final news = await _newsRepository.getNews();
     setState(() {
       _newsModel = news;
       _isLoading = false;

@@ -3,7 +3,7 @@ import 'package:http/http.dart' as http;
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import '../models/launches_model.dart';
 
-class LaunchLibraryApi {
+class LaunchesRepository {
   Future<LaunchesModel> getLaunches() async {
     final url = Uri.parse(dotenv.env['LAUNCHES_LIBRARY_URL']!);
     final response = await http.get(url);

@@ -5,7 +5,7 @@ import 'package:http/http.dart' as http;
 
 import '../models/news_model.dart';
 
-class NewsApi {
+class NewsRepository {
   String newsApiKey = dotenv.env['NEWS_API_KEY']!;
 
   Future<NewsModel> getNews() async {

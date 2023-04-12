@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../data/services/launch_library_api.dart';
+import '../../data/repositories/launches_repo.dart';
 import '../../data/models/launches_model.dart';
 
 class LaunchesPage extends StatefulWidget {
@@ -11,11 +11,11 @@ class LaunchesPage extends StatefulWidget {
 
 class _LaunchesPageState extends State<LaunchesPage> {
   LaunchesModel _launchesModel = LaunchesModel(0, '', []);
-  LaunchLibraryApi _launchLibraryApi = LaunchLibraryApi();
+  LaunchesRepository _launchesRepository = LaunchesRepository();
   bool _isLoading = true;
 
   Future<void> _getLaunches() async {
-    final launches = await _launchLibraryApi.getLaunches();
+    final launches = await _launchesRepository.getLaunches();
     setState(() {
       _launchesModel = launches;
       _isLoading = false;
